@@ -39,7 +39,7 @@
 }
 
 html,body {
-    min-height:100vh;
+    min-height:100dvh;
     background-color:var(--bg);
     color:var(--text);
     transition:background-color .3s ease, color .3s ease;
@@ -173,8 +173,64 @@ body {
         padding-left:1.25rem;
         padding-right:1.25rem;
     }
-    .contacts .row{
-        transform:scale(1.08);
+
+    body {
+        display:flex;
+        flex-direction:column;
+        min-height:100dvh;
+    }
+
+    .hero {
+        padding:2rem 0 1.25rem;
+    }
+
+    .hero-logo-wrap {
+        width:92px;
+        height:92px;
+        margin-bottom:1rem;
+    }
+
+    .hero h1 {
+        font-size:1.5rem;
+        margin-bottom:.4rem;
+    }
+
+    .hero .tagline {
+        font-size:.88rem;
+        line-height:1.6;
+    }
+
+    .hero .eng-name {
+        margin-top:.5rem;
+    }
+
+    .contacts {
+        padding:.5rem 0 1.5rem;
+        flex:1;
+        display:flex;
+        align-items:center;
+    }
+
+    .contact-card {
+        padding:1rem .75rem;
+        gap:.5rem;
+    }
+
+    .contact-icon {
+        font-size:1.8rem;
+    }
+
+    .contact-label {
+        font-size:.72rem;
+    }
+
+    .contact-value {
+        font-size:.88rem;
+    }
+
+    footer {
+        padding:1rem 0;
+        font-size:.76rem;
     }
 }
 
