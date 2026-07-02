@@ -2,11 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const root = document.documentElement;
     const themeIcon = document.getElementById('themeIcon');
     const toggleBtn = document.getElementById('themeToggle');
+    const logos = document.querySelectorAll('.brand-logo');
     const mql = window.matchMedia('(prefers-color-scheme: dark)');
 
     function applyTheme(theme){
         root.setAttribute('data-bs-theme', theme);
         themeIcon.className = theme === 'dark' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+        logos.forEach(img => {
+            img.src = theme === 'dark' ? 'dark-logo.png' : 'logo.png';
+        });
     }
 
     const saved = localStorage.getItem('gh-theme');
